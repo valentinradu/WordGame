@@ -20,7 +20,8 @@ class WordNode: SKNode {
         letters.enumerate().forEach {
             i, label in
             addChild(label)
-            label.fontSize = 50
+            label.fontSize = 40
+            label.fontName = "SanFranciscoText-Medium"
             label.fontColor = .random()
             
             if let prevLabel = prevLabel {

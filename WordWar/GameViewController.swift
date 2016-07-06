@@ -64,7 +64,6 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
         
         let scene = GameScene(size: view.frame.size)
         scene.scaleMode = .ResizeFill
-        scene.backgroundColor = .whiteColor()
         scene.physicsWorld.contactDelegate = self
         view.presentScene(scene)
         
@@ -194,10 +193,6 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
         }
         
         dispatch_group_notify(group, dispatch_get_main_queue()) {
-            self.resetPassiveWord()
-            self.seedActiveWord()
-            self.resetActiveWord()
-            
             if self.livesCount == 0 {
                 self.stopGame()
                 let message = String(format:"Nope %@ and %@ mean different things! Try again?", self.activeWord ?? "", self.passiveWord ?? "")
@@ -209,6 +204,11 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
                     self.startGame()
                 }))
                 self.showViewController(alert, sender: self)
+            }
+            else {
+                self.resetPassiveWord()
+                self.seedActiveWord()
+                self.resetActiveWord()
             }
         }
     }
