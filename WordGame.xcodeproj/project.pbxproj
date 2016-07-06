@@ -10,14 +10,32 @@
 		F7083D7C1D2B9F55007B7369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D7B1D2B9F55007B7369 /* AppDelegate.swift */; };
 		F7083D7E1D2B9F55007B7369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7083D7D1D2B9F55007B7369 /* Assets.xcassets */; };
 		F7083D811D2B9F55007B7369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7083D7F1D2B9F55007B7369 /* LaunchScreen.storyboard */; };
+		F7083D891D2B9F69007B7369 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D881D2B9F69007B7369 /* GameViewController.swift */; };
+		F7083D8B1D2B9F85007B7369 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D8A1D2B9F85007B7369 /* GameScene.swift */; };
+		F7083D8D1D2BAB47007B7369 /* WordNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D8C1D2BAB47007B7369 /* WordNode.swift */; };
+		F7083D941D2BB1B6007B7369 /* NSColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D8F1D2BB1B6007B7369 /* NSColor+Hex.swift */; };
+		F7083D951D2BB1B6007B7369 /* Swift+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D901D2BB1B6007B7369 /* Swift+Base.swift */; };
+		F7083D961D2BB1B6007B7369 /* Dictionary+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D911D2BB1B6007B7369 /* Dictionary+Base.swift */; };
+		F7083D971D2BB1B6007B7369 /* Array+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D921D2BB1B6007B7369 /* Array+Base.swift */; };
+		F7083D981D2BB1B6007B7369 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D931D2BB1B6007B7369 /* UIColor+Random.swift */; };
+		F7083D9B1D2BB20C007B7369 /* UIColor+WW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D9A1D2BB20C007B7369 /* UIColor+WW.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F7083D781D2B9F55007B7369 /* WordWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7083D781D2B9F55007B7369 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7083D7B1D2B9F55007B7369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7083D7D1D2B9F55007B7369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7083D801D2B9F55007B7369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7083D821D2B9F55007B7369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7083D881D2B9F69007B7369 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F7083D8A1D2B9F85007B7369 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F7083D8C1D2BAB47007B7369 /* WordNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordNode.swift; sourceTree = "<group>"; };
+		F7083D8F1D2BB1B6007B7369 /* NSColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Hex.swift"; sourceTree = "<group>"; };
+		F7083D901D2BB1B6007B7369 /* Swift+Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift+Base.swift"; sourceTree = "<group>"; };
+		F7083D911D2BB1B6007B7369 /* Dictionary+Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Base.swift"; sourceTree = "<group>"; };
+		F7083D921D2BB1B6007B7369 /* Array+Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Base.swift"; sourceTree = "<group>"; };
+		F7083D931D2BB1B6007B7369 /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		F7083D9A1D2BB20C007B7369 /* UIColor+WW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+WW.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +60,7 @@
 		F7083D791D2B9F55007B7369 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7083D781D2B9F55007B7369 /* WordWar.app */,
+				F7083D781D2B9F55007B7369 /* WordGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				F7083D7B1D2B9F55007B7369 /* AppDelegate.swift */,
+				F7083D991D2BB1E0007B7369 /* Local Extensions */,
+				F7083D8E1D2BB194007B7369 /* Extensions */,
+				F7083D9D1D2BD8FB007B7369 /* Controller */,
+				F7083D9C1D2BD8E2007B7369 /* View */,
 				F7083D7D1D2B9F55007B7369 /* Assets.xcassets */,
 				F7083D7F1D2B9F55007B7369 /* LaunchScreen.storyboard */,
 				F7083D821D2B9F55007B7369 /* Info.plist */,
@@ -58,12 +80,49 @@
 			path = WordWar;
 			sourceTree = "<group>";
 		};
+		F7083D8E1D2BB194007B7369 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7083D8F1D2BB1B6007B7369 /* NSColor+Hex.swift */,
+				F7083D901D2BB1B6007B7369 /* Swift+Base.swift */,
+				F7083D911D2BB1B6007B7369 /* Dictionary+Base.swift */,
+				F7083D921D2BB1B6007B7369 /* Array+Base.swift */,
+				F7083D931D2BB1B6007B7369 /* UIColor+Random.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		F7083D991D2BB1E0007B7369 /* Local Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7083D9A1D2BB20C007B7369 /* UIColor+WW.swift */,
+			);
+			name = "Local Extensions";
+			sourceTree = "<group>";
+		};
+		F7083D9C1D2BD8E2007B7369 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7083D8A1D2B9F85007B7369 /* GameScene.swift */,
+				F7083D8C1D2BAB47007B7369 /* WordNode.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F7083D9D1D2BD8FB007B7369 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7083D881D2B9F69007B7369 /* GameViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F7083D771D2B9F55007B7369 /* WordWar */ = {
+		F7083D771D2B9F55007B7369 /* WordGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7083D851D2B9F55007B7369 /* Build configuration list for PBXNativeTarget "WordWar" */;
+			buildConfigurationList = F7083D851D2B9F55007B7369 /* Build configuration list for PBXNativeTarget "WordGame" */;
 			buildPhases = (
 				F7083D741D2B9F55007B7369 /* Sources */,
 				F7083D751D2B9F55007B7369 /* Frameworks */,
@@ -73,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = WordWar;
+			name = WordGame;
 			productName = WordWar;
-			productReference = F7083D781D2B9F55007B7369 /* WordWar.app */;
+			productReference = F7083D781D2B9F55007B7369 /* WordGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -93,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F7083D731D2B9F55007B7369 /* Build configuration list for PBXProject "WordWar" */;
+			buildConfigurationList = F7083D731D2B9F55007B7369 /* Build configuration list for PBXProject "WordGame" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -106,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F7083D771D2B9F55007B7369 /* WordWar */,
+				F7083D771D2B9F55007B7369 /* WordGame */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7083D971D2BB1B6007B7369 /* Array+Base.swift in Sources */,
+				F7083D951D2BB1B6007B7369 /* Swift+Base.swift in Sources */,
+				F7083D8B1D2B9F85007B7369 /* GameScene.swift in Sources */,
+				F7083D941D2BB1B6007B7369 /* NSColor+Hex.swift in Sources */,
+				F7083D981D2BB1B6007B7369 /* UIColor+Random.swift in Sources */,
+				F7083D961D2BB1B6007B7369 /* Dictionary+Base.swift in Sources */,
+				F7083D891D2B9F69007B7369 /* GameViewController.swift in Sources */,
 				F7083D7C1D2B9F55007B7369 /* AppDelegate.swift in Sources */,
+				F7083D8D1D2BAB47007B7369 /* WordNode.swift in Sources */,
+				F7083D9B1D2BB20C007B7369 /* UIColor+WW.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +306,7 @@
 				INFOPLIST_FILE = WordWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.valentinradu.WordWar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WordGame;
 			};
 			name = Debug;
 		};
@@ -249,14 +317,14 @@
 				INFOPLIST_FILE = WordWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.valentinradu.WordWar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WordGame;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7083D731D2B9F55007B7369 /* Build configuration list for PBXProject "WordWar" */ = {
+		F7083D731D2B9F55007B7369 /* Build configuration list for PBXProject "WordGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7083D831D2B9F55007B7369 /* Debug */,
@@ -265,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7083D851D2B9F55007B7369 /* Build configuration list for PBXNativeTarget "WordWar" */ = {
+		F7083D851D2B9F55007B7369 /* Build configuration list for PBXNativeTarget "WordGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7083D861D2B9F55007B7369 /* Debug */,

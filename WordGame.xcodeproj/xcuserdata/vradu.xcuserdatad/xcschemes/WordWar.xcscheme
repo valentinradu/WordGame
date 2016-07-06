@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F7083D771D2B9F55007B7369"
-               BuildableName = "WordWar.app"
-               BlueprintName = "WordWar"
-               ReferencedContainer = "container:WordWar.xcodeproj">
+               BuildableName = "WordGame.app"
+               BlueprintName = "WordGame"
+               ReferencedContainer = "container:WordGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F7083D771D2B9F55007B7369"
-            BuildableName = "WordWar.app"
-            BlueprintName = "WordWar"
-            ReferencedContainer = "container:WordWar.xcodeproj">
+            BuildableName = "WordGame.app"
+            BlueprintName = "WordGame"
+            ReferencedContainer = "container:WordGame.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F7083D771D2B9F55007B7369"
-            BuildableName = "WordWar.app"
-            BlueprintName = "WordWar"
-            ReferencedContainer = "container:WordWar.xcodeproj">
+            BuildableName = "WordGame.app"
+            BlueprintName = "WordGame"
+            ReferencedContainer = "container:WordGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F7083D771D2B9F55007B7369"
-            BuildableName = "WordWar.app"
-            BlueprintName = "WordWar"
-            ReferencedContainer = "container:WordWar.xcodeproj">
+            BuildableName = "WordGame.app"
+            BlueprintName = "WordGame"
+            ReferencedContainer = "container:WordGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

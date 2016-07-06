@@ -10,16 +10,21 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let rootViewController = GameViewController(nibName: nil, bundle: nil)
+        rootViewController.dictionary = ["usa":"door",
+                                         "casa":"house",
+                                         "caine":"dog",
+                                         "pisica":"cat"]
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        // Override point for customization after application launch.
-        self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
-        return true
+        self.window?.rootViewController = rootViewController
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.makeKeyAndVisible()
+        return self.window != nil
     }
 
     func applicationWillResignActive(application: UIApplication) {

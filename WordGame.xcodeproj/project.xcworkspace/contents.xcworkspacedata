@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WordWar.xcodeproj">
+      location = "self:/Users/vradu/Playgrounds/WordWar/WordGame.xcodeproj">
    </FileRef>
 </Workspace>
