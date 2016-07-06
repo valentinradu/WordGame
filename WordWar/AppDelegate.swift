@@ -16,10 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let rootViewController = GameViewController(nibName: nil, bundle: nil)
-        rootViewController.dictionary = ["usa":"door",
-                                         "casa":"house",
-                                         "caine":"dog",
-                                         "pisica":"cat"]
+        
+        
+        guard
+            let url = NSBundle.mainBundle().URLForResource("words", withExtension: "json"),
+            let data = NSData(contentsOfURL:url),
+            let arr = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) as? [[String:String]]
+            else {assertionFailure(); return false}
+        
+        let items:[(String, String)] = arr.flatMap {
+            item in
+            guard let langA = item["text_eng"] else {assertionFailure();return nil}
+            guard let langB = item["text_spa"] else {assertionFailure();return nil}
+            return (langA, langB)
+        }
+        
+        rootViewController.dictionary = Dictionary(items)
+        
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = rootViewController
         self.window?.backgroundColor = UIColor.whiteColor()

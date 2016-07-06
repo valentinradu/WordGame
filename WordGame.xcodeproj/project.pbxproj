@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0B9AA921D2D8D9C00F29307 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = B0B9AA911D2D8D9C00F29307 /* words.json */; };
 		F7083D7C1D2B9F55007B7369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7083D7B1D2B9F55007B7369 /* AppDelegate.swift */; };
 		F7083D7E1D2B9F55007B7369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7083D7D1D2B9F55007B7369 /* Assets.xcassets */; };
 		F7083D811D2B9F55007B7369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7083D7F1D2B9F55007B7369 /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0B9AA911D2D8D9C00F29307 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		F7083D781D2B9F55007B7369 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7083D7B1D2B9F55007B7369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7083D7D1D2B9F55007B7369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				F7083D7D1D2B9F55007B7369 /* Assets.xcassets */,
 				F7083D7F1D2B9F55007B7369 /* LaunchScreen.storyboard */,
 				F7083D821D2B9F55007B7369 /* Info.plist */,
+				B0B9AA911D2D8D9C00F29307 /* words.json */,
 			);
 			path = WordWar;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B9AA921D2D8D9C00F29307 /* words.json in Resources */,
 				F7083D7E1D2B9F55007B7369 /* Assets.xcassets in Resources */,
 				F7083D811D2B9F55007B7369 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -340,6 +344,7 @@
 				F7083D871D2B9F55007B7369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

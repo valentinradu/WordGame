@@ -22,6 +22,7 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
     private var passiveWord:String?
     private var livesLabel:UILabel?
     private var scoreLabel:UILabel?
+    private var activeWordsOptions:[String]?
     
     private var livesCount:Int = 0 {
         didSet {
@@ -63,6 +64,7 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
         
         let scene = GameScene(size: view.frame.size)
         scene.scaleMode = .ResizeFill
+        scene.backgroundColor = .whiteColor()
         scene.physicsWorld.contactDelegate = self
         view.presentScene(scene)
         
@@ -89,8 +91,30 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
         
         let point = scene.convertPointFromView(touch.locationInView(view))
         let node = scene.nodeAtPoint(point)
-        
         if topNode.children.contains(node) {
+            if areWordsMatching() {
+                livesCount -= 1
+                if livesCount == 0 {
+                    stopGame()
+                    let message = String(format:"%@ and %@ actually mean the same thing! Try again?", activeWord ?? "", passiveWord ?? "")
+                    let alert = UIAlertController(title: "Game over",
+                                                  message:  message ,
+                                                  preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "Yes!", style: .Default, handler: {
+                        action in
+                        self.startGame()
+                    }))
+                    self.showViewController(alert, sender: self)
+                }
+                else {
+                    resetPassiveWord()
+                    seedActiveWord()
+                }
+            }
+            else {
+                score += 1
+            }
+        
             topNode.letters.forEach{$0.physicsBody?.categoryBitMask = GhostCategory}
             topNode.letters.forEach{$0.physicsBody?.contactTestBitMask = NotestCategory}
             
@@ -102,25 +126,6 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
                 self.resetActiveWord()
             }
             topNode.runAction(SKAction.sequence([fade, remove, notify]))
-        }
-        
-        if areWordsMatching() {
-            livesCount -= 1
-            if livesCount == 0 {
-                stopGame()
-                let message = String(format:"%@ and %@ actually mean the same thing! Try again?", activeWord ?? "", passiveWord ?? "")
-                let alert = UIAlertController(title: "Game over",
-                                              message:  message ,
-                                              preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "Yes!", style: .Default, handler: {
-                    action in
-                    self.startGame()
-                }))
-                self.showViewController(alert, sender: self)
-            }
-        }
-        else {
-            score += 1
         }
     }
     
@@ -189,8 +194,9 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
         }
         
         dispatch_group_notify(group, dispatch_get_main_queue()) {
-            self.resetActiveWord()
             self.resetPassiveWord()
+            self.seedActiveWord()
+            self.resetActiveWord()
             
             if self.livesCount == 0 {
                 self.stopGame()
@@ -244,8 +250,32 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
     }
     
     private func randomizeActiveWord() {
+        guard let _ = activeWordsOptions where activeWordsOptions?.count > 0 else {assertionFailure();return}
+        activeWord = activeWordsOptions?.first
+        activeWordsOptions = Array(activeWordsOptions?.dropFirst() ?? [])
+    }
+    
+    private func seedActiveWord() {
         guard let dictionary = dictionary else {assertionFailure();return}
-        activeWord = Array(dictionary.values).shuffle().first
+        guard let passiveWord = passiveWord else {assertionFailure();return}
+        guard let answer = dictionary[passiveWord] else {assertionFailure();return}
+        
+        let wrongSamplesLimit = 5
+        let shuffledValues = dictionary.values.shuffle()
+        var samples:[String] = shuffledValues
+            .filter {
+                (item:String) in
+                return !((item.characters.count - 2 ... item.characters.count + 2) ~= answer.characters.count)
+            }
+        
+        let plusCount = (wrongSamplesLimit - samples.count).clamp(0, upper: shuffledValues.count)
+        let minusCount = (samples.count - wrongSamplesLimit).clamp(0, upper: samples.count)
+        
+        samples.appendContentsOf(shuffledValues[0..<plusCount])
+        samples = Array(samples.dropLast(minusCount))
+        samples.insert(answer, atIndex: Int(arc4random_uniform(UInt32(samples.count))))
+        
+        activeWordsOptions = samples
     }
     
     private func areWordsMatching() -> Bool {
@@ -271,8 +301,9 @@ class GameViewController: UIViewController, SKPhysicsContactDelegate {
         view.paused = false
         livesCount = 3
         score = 0
-        resetActiveWord()
         resetPassiveWord()
+        seedActiveWord()
+        resetActiveWord()
     }
     
     private func stopGame() {

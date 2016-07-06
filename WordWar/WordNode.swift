@@ -20,7 +20,7 @@ class WordNode: SKNode {
         letters.enumerate().forEach {
             i, label in
             addChild(label)
-            label.fontSize = 70
+            label.fontSize = 50
             label.fontColor = .random()
             
             if let prevLabel = prevLabel {
@@ -50,7 +50,7 @@ class WordNode: SKNode {
                 center: CGPoint(x: 0, y: label.frame.size.height / 2))
             label.physicsBody?.mass = 1.0;
             label.physicsBody?.angularDamping = 0.5
-            label.physicsBody?.linearDamping = 2.8
+            label.physicsBody?.linearDamping = 3.5
             label.physicsBody?.friction = 0.85
             label.physicsBody?.restitution = 0.7
             label.physicsBody?.allowsRotation = false
